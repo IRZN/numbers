@@ -4,6 +4,7 @@
 int main () {
     int pos = 0, neg = 0, z = 0, cont = 0, n;
     int porc_pos, porc_neg, porc_z;
+    int sn, i = 1;
     do {
         printf ("Digite um numero qualquer: \n");
         scanf ("%i", &n);
@@ -19,8 +20,18 @@ int main () {
         }
 
         cont++;
+        printf ("\nQuer adicionar mais um numero? \n");
+        printf ("1 - SIM \n2 - NAO \n");
+        scanf ("%i", &sn);
 
-    }while (cont < 20);
+        if (sn == 2) {
+         i = -1;
+        } else {
+            i++;
+        }
+
+
+    }while (i > 0);
 
     porc_pos = ( pos * 100 ) / cont;
     porc_neg = ( neg * 100 ) / cont;
